@@ -1,4 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
-GenericsTestMaximum.MaximumValue<int> max = new GenericsTestMaximum.MaximumValue<int>();
-Console.WriteLine(max.MaximumOfAll(10, 6, 8));
+GenericsTestMaximum.MaximumValue<float> max = new GenericsTestMaximum.MaximumValue<float>();
+Console.WriteLine(max.MaximumOfFloat(10.8f, 6.25f, 8.06f));
