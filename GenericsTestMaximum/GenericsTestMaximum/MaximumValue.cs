@@ -34,5 +34,18 @@ namespace GenericsTestMaximum
             else
                 return num3;
         }
+        public string MaximumOfString(string strg1, string strg2, string strg3)
+        {
+            if (strg1.CompareTo(strg2) > 0 && strg1.CompareTo(strg3) >0)
+            {
+                return strg1;
+            }
+            else if (strg2.CompareTo(strg1) > 0 && strg2.CompareTo(strg3) > 0)
+            {
+                return strg2;
+            }
+            else
+                return strg3;
+        }
     }
 }

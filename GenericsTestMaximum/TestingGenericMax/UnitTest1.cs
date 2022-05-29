@@ -50,5 +50,29 @@ namespace TestingGenericMax
             var ActualResult = max.MaximumOfFloat(a, b, c);
             Assert.AreEqual(c, ActualResult);
         }
+        [Test]
+        public void MaxStringtValueInFirstPosition_CheckMaxNumber_ReturnStringMaxInFirstPosition()
+        {
+            string a = "Yellow", b = "Black", c = "Pink";
+            GenericsTestMaximum.MaximumValue<string> max = new GenericsTestMaximum.MaximumValue<string>();
+            var ActualResult = max.MaximumOfString(a, b, c);
+            Assert.AreEqual(a, ActualResult);
+        }
+        [Test]
+        public void MaxStringtValueInSecondPosition_CheckMaxNumber_ReturnStringMaxInSecondPosition()
+        {
+            string a = "Blue", b = "White", c = "Pink";
+            GenericsTestMaximum.MaximumValue<string> max = new GenericsTestMaximum.MaximumValue<string>();
+            var ActualResult = max.MaximumOfString(a, b, c);
+            Assert.AreEqual(b, ActualResult);
+        }
+        [Test]
+        public void MaxStringtValueInThirdPosition_CheckMaxNumber_ReturnStringMaxInThirdPosition()
+        {
+            string a = "Orange", b = "Black", c = "Violet";
+            GenericsTestMaximum.MaximumValue<string> max = new GenericsTestMaximum.MaximumValue<string>();
+            var ActualResult = max.MaximumOfString(a, b, c);
+            Assert.AreEqual(c, ActualResult);
+        }
     }
 }
