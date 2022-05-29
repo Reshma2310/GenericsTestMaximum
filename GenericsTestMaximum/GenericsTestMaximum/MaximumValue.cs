@@ -7,45 +7,19 @@ using System.Threading.Tasks;
 namespace GenericsTestMaximum
 {
     public class MaximumValue<T> where T : IComparable
-    {
-        public int MaximumOfAll(int num1, int num2, int num3)
-        {            
-            if (num1>num2 && num1>num3)
-            {
-                return num1;
-            }
-            else if (num2>num1 && num2>num3)
-            {
-                return num2;
-            }
-            else
-                return num3;
-        }
-        public float MaximumOfFloat(float num1, float num2, float num3)
+    {        
+        public T MaximumOfInputs<T>(T input1, T input2, T input3) where T : IComparable
         {
-            if (num1 > num2 && num1 > num3)
+            if (input1.CompareTo(input2) > 0 && input1.CompareTo(input3) >0)
             {
-                return num1;
+                return input1;
             }
-            else if (num2 > num1 && num2 > num3)
+            else if (input2.CompareTo(input1) > 0 && input2.CompareTo(input3) > 0)
             {
-                return num2;
-            }
-            else
-                return num3;
-        }
-        public string MaximumOfString(string strg1, string strg2, string strg3)
-        {
-            if (strg1.CompareTo(strg2) > 0 && strg1.CompareTo(strg3) >0)
-            {
-                return strg1;
-            }
-            else if (strg2.CompareTo(strg1) > 0 && strg2.CompareTo(strg3) > 0)
-            {
-                return strg2;
+                return input2;
             }
             else
-                return strg3;
+                return input3;
         }
     }
 }

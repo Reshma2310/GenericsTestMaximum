@@ -7,7 +7,7 @@ namespace TestingGenericMax
         {
             int a = 25, b = 10, c = 15;
             GenericsTestMaximum.MaximumValue<int> max = new GenericsTestMaximum.MaximumValue<int>();
-            var ActualResult = max.MaximumOfAll(a, b, c);
+            var ActualResult = max.MaximumOfInputs<int>(a, b, c);
             Assert.AreEqual(a, ActualResult);
         }
         [Test]
@@ -15,7 +15,7 @@ namespace TestingGenericMax
         {
             int a = 25, b = 40, c = 15;
             GenericsTestMaximum.MaximumValue<int> max = new GenericsTestMaximum.MaximumValue<int>();
-            var ActualResult = max.MaximumOfAll(a, b, c);
+            var ActualResult = max.MaximumOfInputs<int>(a, b, c);
             Assert.AreEqual(b, ActualResult);
         }
         [Test]
@@ -23,7 +23,7 @@ namespace TestingGenericMax
         {
             int a = 25, b = 20, c = 65;
             GenericsTestMaximum.MaximumValue<int> max = new GenericsTestMaximum.MaximumValue<int>();
-            var ActualResult = max.MaximumOfAll(a, b, c);
+            var ActualResult = max.MaximumOfInputs<int>(a, b, c);
             Assert.AreEqual(c, ActualResult);
         }
         [Test]
@@ -31,7 +31,7 @@ namespace TestingGenericMax
         {
             float a = 25.08f, b = 10.56f, c = 15.92f;
             GenericsTestMaximum.MaximumValue<float> max = new GenericsTestMaximum.MaximumValue<float>();
-            var ActualResult = max.MaximumOfFloat(a, b, c);
+            var ActualResult = max.MaximumOfInputs<float>(a, b, c);
             Assert.AreEqual(a, ActualResult);
         }
         [Test]
@@ -39,7 +39,7 @@ namespace TestingGenericMax
         {
             float a = 25.08f, b = 40.56f, c = 15.95f;
             GenericsTestMaximum.MaximumValue<float> max = new GenericsTestMaximum.MaximumValue<float>();
-            var ActualResult = max.MaximumOfFloat(a, b, c);
+            var ActualResult = max.MaximumOfInputs<float>(a, b, c);
             Assert.AreEqual(b, ActualResult);
         }
         [Test]
@@ -47,7 +47,7 @@ namespace TestingGenericMax
         {
             float a = 25.56f, b = 20.68f, c = 65.05f;
             GenericsTestMaximum.MaximumValue<float> max = new GenericsTestMaximum.MaximumValue<float>();
-            var ActualResult = max.MaximumOfFloat(a, b, c);
+            var ActualResult = max.MaximumOfInputs<float>(a, b, c);
             Assert.AreEqual(c, ActualResult);
         }
         [Test]
@@ -55,7 +55,7 @@ namespace TestingGenericMax
         {
             string a = "Yellow", b = "Black", c = "Pink";
             GenericsTestMaximum.MaximumValue<string> max = new GenericsTestMaximum.MaximumValue<string>();
-            var ActualResult = max.MaximumOfString(a, b, c);
+            var ActualResult = max.MaximumOfInputs<string>(a, b, c);
             Assert.AreEqual(a, ActualResult);
         }
         [Test]
@@ -63,7 +63,7 @@ namespace TestingGenericMax
         {
             string a = "Blue", b = "White", c = "Pink";
             GenericsTestMaximum.MaximumValue<string> max = new GenericsTestMaximum.MaximumValue<string>();
-            var ActualResult = max.MaximumOfString(a, b, c);
+            var ActualResult = max.MaximumOfInputs<string>(a, b, c);
             Assert.AreEqual(b, ActualResult);
         }
         [Test]
@@ -71,7 +71,7 @@ namespace TestingGenericMax
         {
             string a = "Orange", b = "Black", c = "Violet";
             GenericsTestMaximum.MaximumValue<string> max = new GenericsTestMaximum.MaximumValue<string>();
-            var ActualResult = max.MaximumOfString(a, b, c);
+            var ActualResult = max.MaximumOfInputs<string>(a, b, c);
             Assert.AreEqual(c, ActualResult);
         }
     }
