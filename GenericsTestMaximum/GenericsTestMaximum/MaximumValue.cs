@@ -28,5 +28,9 @@ namespace GenericsTestMaximum
             T max = MaxValue(this.inputArray);
             return max;            
         }
+        public void PrintMaxValue(T max)
+        {
+            Console.WriteLine("Maximum Value is: " + max);
+        }
     }
 }

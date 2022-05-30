@@ -4,8 +4,8 @@ float[] percent = { 1.2f, 2.3f, 22.6f, 50.7f, 0.85f };
 string[] Colours = { "Red", "Blue", "Pink", "Orange" };
 
 GenericsTestMaximum.MaximumValue<int> maxint = new GenericsTestMaximum.MaximumValue<int>(numbers);
-Console.WriteLine(maxint.MaxValue());
+maxint.PrintMaxValue(maxint.MaxValue());
 GenericsTestMaximum.MaximumValue<float> maxFloat = new GenericsTestMaximum.MaximumValue<float>(percent);
-Console.WriteLine(maxFloat.MaxValue());
+maxFloat.PrintMaxValue(maxFloat.MaxValue());
 GenericsTestMaximum.MaximumValue<string> maxString = new GenericsTestMaximum.MaximumValue<string>(Colours);
-Console.WriteLine(maxString.MaxValue());
+maxString.PrintMaxValue(maxString.MaxValue());
