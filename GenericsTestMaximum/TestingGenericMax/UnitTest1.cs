@@ -1,78 +1,30 @@
 namespace TestingGenericMax
 {
     public class Tests
-    {        
+    {     
         [Test]
-        public void MaxValueInFirstPosition_CheckMaxNumber_ReturnMaxInFirstPosition()
+        public void IntergerArray_CheckMaxNumber_ReturnMaxIntValue()
         {
-            int a = 25, b = 10, c = 15;
-            GenericsTestMaximum.MaximumValue<int> max = new GenericsTestMaximum.MaximumValue<int>(a, b, c);
+            int[] array = { 25, 10, 15, 5, 60 };
+            GenericsTestMaximum.MaximumValue<int> max = new GenericsTestMaximum.MaximumValue<int>(array);
             var ActualResult = max.MaxValue();
-            Assert.AreEqual(a, ActualResult);
+            Assert.AreEqual(60, ActualResult);
         }
         [Test]
-        public void MaxValueInSecondPosition_CheckMaxNumber_ReturnMaxInSecondPosition()
+        public void FloatArray_CheckMaxNumber_ReturnMaxFlaotValue()
         {
-            int a = 25, b = 40, c = 15;
-            GenericsTestMaximum.MaximumValue<int> max = new GenericsTestMaximum.MaximumValue<int>(a, b, c);
+            float[] array = { 1.2f, 2.3f, 22.6f, 50.7f, 0.85f };
+            GenericsTestMaximum.MaximumValue<float> max = new GenericsTestMaximum.MaximumValue<float>(array);
             var ActualResult = max.MaxValue();
-            Assert.AreEqual(b, ActualResult);
+            Assert.AreEqual(50.7f, ActualResult);
         }
         [Test]
-        public void MaxValueInThirdPosition_CheckMaxNumber_ReturnMaxInThirdPosition()
+        public void StringArray_CheckMaxNumber_ReturnMaxString()
         {
-            int a = 25, b = 20, c = 65;
-            GenericsTestMaximum.MaximumValue<int> max = new GenericsTestMaximum.MaximumValue<int>(a, b, c);
+            string[] array = { "Red", "Blue", "Pink", "Orange" };
+            GenericsTestMaximum.MaximumValue<string> max = new GenericsTestMaximum.MaximumValue<string>(array);
             var ActualResult = max.MaxValue();
-            Assert.AreEqual(c, ActualResult);
-        }
-        [Test]
-        public void MaxFloatValueInFirstPosition_CheckMaxNumber_ReturnFloatMaxInFirstPosition()
-        {
-            float a = 25.08f, b = 10.56f, c = 15.92f;
-            GenericsTestMaximum.MaximumValue<float> max = new GenericsTestMaximum.MaximumValue<float>(a, b, c);
-            var ActualResult = max.MaxValue();
-            Assert.AreEqual(a, ActualResult);
-        }
-        [Test]
-        public void MaxFloatValueInSecondPosition_CheckMaxNumber_ReturnFloatMaxInSecondPosition()
-        {
-            float a = 25.08f, b = 40.56f, c = 15.95f;
-            GenericsTestMaximum.MaximumValue<float> max = new GenericsTestMaximum.MaximumValue<float>(a, b, c);
-            var ActualResult = max.MaxValue();
-            Assert.AreEqual(b, ActualResult);
-        }
-        [Test]
-        public void MaxFloatValueInThirdPosition_CheckMaxNumber_ReturnMaxInThirdPosition()
-        {
-            float a = 25.56f, b = 20.68f, c = 65.05f;
-            GenericsTestMaximum.MaximumValue<float> max = new GenericsTestMaximum.MaximumValue<float>(a, b, c);
-            var ActualResult = max.MaxValue();
-            Assert.AreEqual(c, ActualResult);
-        }
-        [Test]
-        public void MaxStringtValueInFirstPosition_CheckMaxNumber_ReturnStringMaxInFirstPosition()
-        {
-            string a = "Yellow", b = "Black", c = "Pink";
-            GenericsTestMaximum.MaximumValue<string> max = new GenericsTestMaximum.MaximumValue<string>(a, b, c);
-            var ActualResult = max.MaxValue();
-            Assert.AreEqual(a, ActualResult);
-        }
-        [Test]
-        public void MaxStringtValueInSecondPosition_CheckMaxNumber_ReturnStringMaxInSecondPosition()
-        {
-            string a = "Blue", b = "White", c = "Pink";
-            GenericsTestMaximum.MaximumValue<string> max = new GenericsTestMaximum.MaximumValue<string>(a, b, c);
-            var ActualResult = max.MaxValue();
-            Assert.AreEqual(b, ActualResult);
-        }
-        [Test]
-        public void MaxStringtValueInThirdPosition_CheckMaxNumber_ReturnStringMaxInThirdPosition()
-        {
-            string a = "Orange", b = "Black", c = "Violet";
-            GenericsTestMaximum.MaximumValue<string> max = new GenericsTestMaximum.MaximumValue<string>(a, b, c);
-            var ActualResult = max.MaxValue();
-            Assert.AreEqual(c, ActualResult);
+            Assert.AreEqual("Red", ActualResult);
         }
     }
 }

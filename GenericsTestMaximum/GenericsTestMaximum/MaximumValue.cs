@@ -7,31 +7,26 @@ using System.Threading.Tasks;
 namespace GenericsTestMaximum
 {
     public class MaximumValue<T> where T : IComparable
-    {        
-        public T input1, input2, input3;
-        public MaximumValue(T input1, T input2, T input3)
+    {
+        public T[] inputArray;
+        public MaximumValue(T[] inputArray)
         {
-            this.input1 = input1;
-            this.input2 = input2;
-            this.input3 = input3;
+            this.inputArray = inputArray;            
         }
-        public static T MaxValue(T input1, T input2, T input3)
+        public T[] SortArray(T[] inputArr)
         {
-            if (input1.CompareTo(input2) > 0 && input1.CompareTo(input3) >0)
-            {
-                return input1;
-            }
-            else if (input2.CompareTo(input1) > 0 && input2.CompareTo(input3) > 0)
-            {
-                return input2;
-            }
-            else
-                return input3;
+            Array.Sort(inputArr);
+            return inputArr;
+        }
+        public T MaxValue(T[] MaxInput)
+        {
+            var inputArr = this.SortArray(MaxInput);
+            return inputArr[inputArr.Length - 1];
         }
         public T MaxValue()
         {            
-            T max = MaximumValue<T>.MaxValue(this.input1, this.input2, this.input3);
-            return max;
+            T max = MaxValue(this.inputArray);
+            return max;            
         }
     }
 }
